@@ -1,0 +1,158 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.9.0/css/all.min.css"
+    integrity="sha512-q3eWabyZPc1XTCmF+8/LuE1ozpg5xxn7iO89yfSOd5/oKvyqLngoNGsx8jq92Y8eXJ/IRxQbEC+FGSYxtk2oiw=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <title>Home page</title>
+  <link rel="stylesheet" href="static/css/style.css">
+</head> 
+
+<body>{{!-- data-bs-spy="scroll" data-bs-target=".navbar"--}}
+  {{!-- this is Navbar from partials --}}
+  {{>Navbar data = Detial}}
+
+  {{!-- this is slide erea --}}
+  {{>slider data = Detial2}}
+
+  {{!-- this is the banner 1 section --}}
+  <section id="banner1-section" class="py-5">
+    <div class="container text-center">
+     <div class="row">
+      <div class="col-md-12">
+        <h2>Here we are creating new technology</h2>
+        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolore perferendis commodi, cum reiciendis explicabo ipsum.</p>
+        <button class="btn btn-outline-primary">start learning here</button>
+      </div>
+     </div>
+    </div>
+  </section>
+
+  {{!-- this is services section --}}
+  <section id="services">
+    <div class="container mt-4">
+      <div class="row">
+        <h1 class="text-center text-secondary">Services</h1>
+        <p class="text-center text-secondary">This is our <b>servies</b> section</p>
+        {{#each Detial3}}
+        <div class="col-md-4 mt-3 mb-3">
+          <div class="card">
+            <div class="card-body">
+              <div class="container text-center py-4">
+                <i class="{{this.icon}} services-icon" aria-hidden="true"></i>
+              </div>
+              <h5 class="card-title">{{this.title}}</h5>
+              <p class="card-text">{{description}}</p>
+              <a href="/" class="ml">support</a>
+              <a href="{{this.link}}" class="px-3">{{this.linkName}}</a>
+            </div>
+          </div>
+        </div>
+        {{/each}}
+      </div>
+    </div>
+  </section>
+
+ 
+ {{!-- here i will crete banner2  --}}
+ <section id="banner2-section" class="py-5">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-6 text-center  my-3 ">
+        <h3>So here we are creating second top technology </h3>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla adipisci in repudiandae dolore quaerat? Nihil.</p>
+        <button class="btn btn-primary">open here</button>
+      </div>
+      <div class="col-md-6 text-center">
+        <img src="../static/images/banner2.gif" alt=""  class="img-fluid" style="height: 350px; border-radius: 10%;">
+      </div>
+    </div>
+  </div>
+ </section>
+
+ {{!-- here i will crete banner3  --}}
+ <section id="banner3-section" class="py-5">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-6 text-center">
+        <img src="../static/images/banner3.png" alt=""  class="img-fluid" style="height: 350px; border-radius: 10%;">
+      </div>
+      <div class="col-md-6 text-center  my-3 ">
+        <h3>So here we are creating third top technology </h3>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla adipisci in repudiandae dolore quaerat? Nihil.</p>
+        <button class="btn btn-primary">open here</button>
+      </div>
+    </div>
+  </div>
+ </section>
+
+  {{!-- so here i am creating  contact section --}}
+  <section id="contact-us" class="py-3">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+          <h1 class="text-center text-secondary">Contact us</h1>
+          <form action="/process-contact-form" method="post">
+            <div class="mb-3">
+              <label for="exampleInputEmail1" class="form-label">Your email address</label>
+              <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" name="email">
+              </div>
+            <div class="mb-3">
+              <label for="contactNumber" class="form-label">Your contact number</label>
+              <input type="number" class="form-control" id="contactNumber" name="phone">
+            </div>
+
+          <div class="my-3">
+             <label class="form-label" >Message</label>
+          <textarea style="height: 250px;" class="form-control" placeholder="Leave a query here" id="floatingTextarea" name="message"></textarea>
+         
+        </div>
+
+            <div class="container text-center">
+              <button type="submit" class="btn btn-dark">Submit</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  {{!-- About section --}}
+  <section id="about-section" class="py-5">
+    <div class="container text-center">
+      <div class="row">
+        <div class="col-md-12">
+         <h3>About side</h3> 
+         <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Architecto id rem magnam necessitatibus voluptas velit quod sed iste blanditiis! Qui repudiandae rerum quos accusantium dolorum eos inventore cumque, odio nesciunt, iste, illo minus natus quo! Illo adipisci nesciunt, iure deleniti suscipit esse saepe natus magni labore nobis officiis ea rem!</p>
+         <button class="btn btn-success btn-lg">Contact us</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  {{!-- footer --}}
+  <section class="footer py-5" style="background-color: black; color: white">
+    <div class="container text-center">
+      <div class="row">
+        <div class="col-md-12">
+         Copyright © 2023 <span>codes with Abu. All Rights Reserved</span> 
+        </div>
+      </div>
+    </div>
+  </section>
+
+  </h2>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+    crossorigin="anonymous"></script>
+</body>
+
+</html>

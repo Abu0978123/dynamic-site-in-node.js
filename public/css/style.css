@@ -1,0 +1,26 @@
+/* *{
+    font-family: Prompt ,sans-serif;
+    font-weight: 300;
+} */
+.slider-img{
+    height: 500px !important;
+    object-fit: cover;
+}
+/* nav{
+    background: #000;
+} */
+.services-icon{ 
+    font-size: 100px;
+}
+#contact-us, #banner1-section{
+    background: rgb(3, 3, 3);
+    color: white;
+}
+/* .gallery{
+    background: rgb(3, 3, 3);
+    color: white;
+} */
+/* .gridd{
+    display: grid;
+    grid-template-columns: 3fr;
+} */

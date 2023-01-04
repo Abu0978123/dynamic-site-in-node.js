@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500&family=Prompt:ital,wght@0,200;1,300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../static/css/style.css">
+    <title>Gallery</title>
+  </head>
+  <body>
+     {{>Navbar data = Detial}}
+    
+  <section class="py-5 text-center  " style=" background:url('../static/images/gallery.avif')no-repeat;color: black; background-size: cover; ">
+    <div class="container">
+    <div class="row py-lg-5">
+      <div class="col-lg-6 col-md-8 mx-auto">
+        <h1 class="fw-light">Gallery</h1>
+        <p class="">Something short and leading about the collection below—its contents, the creator, etc. Make it short and sweet, but not too short so folks don’t simply skip over it entirely.</p>
+        <p>
+          <a href="https://instagram.com/itx__abu" target="_blank" class="btn btn-primary my-2">My Instagram Designs</a>
+          <a href="https://facebook.com/thixixabubakkar" target="_blank" class="btn btn-secondary my-2">My Facebook Designs</a>
+        </p>
+      </div>
+    </div>
+    </div>
+  </section>
+
+ <section id="gallery">
+    <div class="container py-4">
+      <div class="row">
+
+        {{# Gallery}}
+        <div class="col-md-4 mt-3 mb-3">
+          <div class="card">
+            <div class="card-body">
+              <div class="container text-center py-4">
+                <img src="{{img}}" class="img-fluid" alt="">
+                </div>
+              <p class="card-text">{{description}}</p>
+              <a href="#" class="px-3">view</a>
+            </div>
+          </div>
+        </div>
+        {{/Gallery}}
+      </div>
+    </div>
+    </section>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+  </body>
+</html>
